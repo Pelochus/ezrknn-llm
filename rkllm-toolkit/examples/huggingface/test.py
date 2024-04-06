@@ -5,7 +5,8 @@ https://huggingface.co/Qwen/Qwen-1_8B-Chat
 Download the Qwen model from the above website.
 '''
 
-modelpath = '/path/to/your/model'
+# Default option. Works only if in the same directory
+modelpath = 'Qwen-1_8B-Chat'
 llm = RKLLM()
 
 # Load model
@@ -25,5 +26,3 @@ ret = llm.export_rkllm("./qwen.rkllm")
 if ret != 0:
     print('Export model failed!')
     exit(ret)
-
-
