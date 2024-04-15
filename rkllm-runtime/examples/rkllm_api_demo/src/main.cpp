@@ -85,6 +85,7 @@ int main(int argc, char **argv)
 
     vector<string> pre_input;
     pre_input.push_back("Welcome to ezrkllm! This is an adaptation of Rockchip's rknn-llm repo (see github.com/airockchip/rknn-llm) for running LLMs on its SoCs' NPUs.\n");
+    pre_input.push_back("\nTo exit the model, enter either exit or quit\n");
     pre_input.push_back("\nMore information here: https://github.com/Pelochus/ezrknpu");
     pre_input.push_back("\nDetailed information for devs here: https://github.com/Pelochus/ezrknn-llm");
 
