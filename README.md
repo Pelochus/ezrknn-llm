@@ -39,12 +39,11 @@ Run:
 
 Then, inside the Docker container:
 
-```bash
-apt install -y python3-tk # This needs some configuring from your part 
+```bash 
 cd ezrknn-llm/rkllm-toolkit/examples/huggingface/
 ```
 
-Now change the `test.py` with your preferred model. This container provides Qwen-1.8B and LLaMa2 Uncensored. By default, Qwen-1.8B is selected. 
+Now change the `test.py` with your preferred model. This container provides Qwen-1.8B since it is the best working one and very lightweight. 
 Before converting the model, remember to run `git lfs pull` to download the model.
 To convert the model, run:
 
