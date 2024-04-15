@@ -2,23 +2,28 @@
 
 # Dependencies
 apt update
-apt install -y python3 pip git curl wget nano sudo 
+apt install -y python3 pip git curl wget nano sudo apt-utils
 
 # Better than using the default from Rockchip
-curl https://raw.githubusercontent.com/Pelochus/ezrknn-llm/master/install.sh | sudo bash
+git clone https://github.com/Pelochus/ezrknn-llm/
+cd ezrknn-llm
+# Optional:
+# git checkout dev-in-progress
+bash install.sh
 
-# For running the test.py
-pip install /ezrknn-llm/rkllm-toolkit/packages/rkllm_toolkit-1.0.1-cp38-cp38-linux_x86_64.whl
+# For converting
+export BUILD_CUDA_EXT=0
+pip install /ezrknn-llm/rkllm-toolkit/packages/rkllm_toolkit-1.2.1b1-cp312-cp312-linux_x86_64.whl --break-system-packages
 
-# Clone some compatible LLMs
-cd /ezrknn-llm/rkllm-toolkit/examples/huggingface
-git clone https://huggingface.co/Qwen/Qwen-1_8B-Chat
-git clone https://huggingface.co/georgesung/llama2_7b_chat_uncensored
+# Clone LLM
+cd /ezrknn-llm/examples/DeepSeek-R1-Distill-Qwen-1.5B_Demo/export
+git clone https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
 
 # Done here to avoid cloning full repository for the Docker image
-apt install -y git-lfs # python3-tk
+apt install -y git-lfs
 
-# cd Qwen-1_8B-Chat
-# git lfs pull
-# cd ../llama2_7b_chat_uncensored
+# Needed
+DEBIAN_FRONTEND=noninteractive apt install -y python3-tk
+
+# cd DeepSeek-R1-Distill-Qwen-1.5B
 # git lfs pull
