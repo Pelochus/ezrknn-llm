@@ -12,6 +12,8 @@ cp build/build_linux_aarch64_Release/llm_demo /usr/bin
 cp ../runtime/Linux/librkllm_api/aarch64/librkllmrt.so /usr/local/include
 ```
 
+To exit the LLM enter either `exit` or `quit`.
+
 ## Run
 ```bash
 adb shell
