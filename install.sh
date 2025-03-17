@@ -25,12 +25,12 @@ fi
 
 message_print "Installing RKNN LLM libraries..."
 
-cp ./rkllm-runtime/runtime/Linux/librkllm_api/aarch64/* /usr/lib
-cp ./rkllm-runtime/runtime/Linux/librkllm_api/include/* /usr/local/include
+cp ./rkllm-runtime/Linux/librkllm_api/aarch64/* /usr/lib
+cp ./rkllm-runtime/Linux/librkllm_api/include/* /usr/local/include
 
 message_print "Compiling LLM runtime for Linux..."
 
-cd ./rkllm-runtime/examples/rkllm_api_demo/
+cd ./examples/DeepSeek-R1-Distill-Qwen-1.5B_Demo/deploy
 bash build-linux.sh
 
 message_print "Moving rkllm to /usr/bin..."
