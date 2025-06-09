@@ -7,4 +7,4 @@ apt update && apt full-upgrade -y
 cd /ezrknn-llm
 git pull
 
-bash
+exec bash
