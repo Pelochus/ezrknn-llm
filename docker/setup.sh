@@ -4,11 +4,10 @@
 apt update
 apt install -y python3 pip git curl wget nano sudo apt-utils
 
-# Better than using the default from Rockchip
-git clone https://github.com/Pelochus/ezrknn-llm/
+# Clone only the corresponding branch
+# This way, the Docker tag is the same (if done correctly manuallty) as the branch inside it 
+git clone --branch 1.2.1 --single-branch https://github.com/Pelochus/ezrknn-llm/
 cd ezrknn-llm
-# Optional:
-# git checkout dev-in-progress
 bash install.sh
 
 # For converting
